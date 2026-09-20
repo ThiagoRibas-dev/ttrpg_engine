@@ -2,12 +2,12 @@
 
 **Status:** Locked canonical specification.  
 **Spine:** 01 Core Engine, Batch 3 of 5 ([DEC-109](../../02_decisions/01_master_decision_log.md)).  
-**Source:** Migrated 2026-09-19 from archived `03_core_baseline_system/01_resolution_engine.md` §5–6; archived glossary Boon/Bane entries cross-checked for consistency.  
-**Voice:** [DEC-110](../../02_decisions/01_master_decision_log.md), [DEC-111](../../02_decisions/01_master_decision_log.md) — rules and meaning unchanged.
+**Source:** Migrated 2026-09-19 from archived `03_core_baseline_system/01_resolution_engine.md` §5–6; archived glossary Boon/Bane entries cross-checked for consistency; notation canonized per [DEC-112](../../02_decisions/01_master_decision_log.md) on review.  
+**Voice:** [DEC-110](../../02_decisions/01_master_decision_log.md), [DEC-111](../../02_decisions/01_master_decision_log.md), [DEC-112](../../02_decisions/01_master_decision_log.md).
 
 ## Purpose <a id="purpose"></a>
 
-Boons and Banes are how the game says "you have the advantage" or "the odds are against you" without ever writing +2 or -2. A Boon is an extra die rolled into your pool. A Bane is a die taken out of it, or, if you're down to your last die, a smaller die.
+Boons and Banes represent "you have the advantage" or "the odds are against you" without doing math. A Boon adds, and a Bane removes a die from your dice pool, lowering the die size if you're down to your last die.
 
 For example, attacking an enemy your ally has pinned against a wall might earn +1B on your 3d8 attack pool: you roll 4d8 and keep your highest.
 
@@ -16,7 +16,7 @@ This specification also owns Die Step-Up and Die Step-Down: the mechanics that g
 ## Scope <a id="scope"></a>
 
 **Owns:**
-- Boon and Bane definitions and their check notation (`+1B`, `+1X`).
+- Boon and Bane definitions and their check notation (`+1B`, `-1B`).
 - Final-pool timing: after pool construction and after Die Steps.
 - Cancellation.
 - The five Boon/Bane types and all stacking rules (same-type, different-type, Untyped, same-source).
@@ -36,14 +36,14 @@ This specification also owns Die Step-Up and Die Step-Down: the mechanics that g
 
 ### Boons and Banes Are Final-Pool Effects <a id="final-pool-effects"></a>
 
-Boons and Banes are resolved after ordinary pool construction and after applicable Die Step-Ups and Die Step-Downs. In check notation, `+1B` is one Boon and `+1X` is one Bane.
+Boons and Banes are resolved after ordinary pool construction and after applicable Die Step-Ups and Die Step-Downs. In check notation, `+1B` is one Boon and `-1B` is one Bane.
 
 ### Cancellation <a id="cancellation"></a>
 
 One Boon cancels one Bane, and one Bane cancels one Boon. Cancel first, then apply what remains:
 
 ```text
-2d8 +2B +1X → 2d8 +1B → 3d8
+2d8 +2B -1B → 2d8 +1B → 3d8
 ```
 
 ### Typed Stacking <a id="typed-stacking"></a>
@@ -77,14 +77,14 @@ Boons participate normally in Required Success counting. A Boon does not grant a
 Each remaining Bane removes one die from the final pool.
 
 ```text
-3d8 +1X → 2d8
-3d8 +2X → 1d8
+3d8 -1B → 2d8
+3d8 -2B → 1d8
 ```
 
 A pool cannot be reduced below one die. If a Bane is applied to a one-die pool, apply one Die Step-Down to that die instead:
 
 ```text
-1d8 +1X → 1d6
+1d8 -1B → 1d6
 ```
 
 Further Banes do not apply additional Die Step-Downs. If the die is already a `d4`, the check is an automatic failure.
@@ -98,7 +98,7 @@ Up-Shift: d8 → d10
 Down-Shift: d10 → d8
 ```
 
-Die Step-Ups and Die Step-Downs are applied before final Boons and Banes. The ordinary ladder ends at `d12`; Exert is the explicit temporary `d12`-to-`d20` exception. Universal resource costs and limits are not defined here; the specific Stamina, Essence, Class, Feat, Spell, Equipment, or Condition rule provides them.
+Die Step-Ups and Die Step-Downs are applied before final Boons and Banes and ordinarily go up to `d12`; Exert is the explicit temporary exception that can Step-Up a `d12` to a `d20`. Universal resource costs and limits are provided by the specific Stamina, Essence, Class, Feat, Spell, Equipment, or Condition rule.
 
 If a Die Step-Down would reduce a `d4` under a specific effect, that effect must state its consequence. A Bane-induced `d4` Step-Down specifically causes automatic failure.
 
@@ -119,12 +119,12 @@ Formal edges live in the [Framework Registry](../../00_architecture/framework_re
 ## Open Definitions and Deferred Content <a id="open-definitions"></a>
 
 1. **Cross-reference debt:** Required Successes procedure (Conflict layer), Automatic Successes (Batch 4), Exert's owning specification, and Conditions (Conflict layer) are referenced by name; precise links are added when their specifications migrate.
-2. **Notation collision:** `X` marks a Bane in check notation (`+1X`) and also stands for the die size in the base check (`2dX`). The source uses both meanings; retained as written. If this proves confusing for readers, a notation decision is needed — do not change it silently.
-3. **Glossary consistency:** the archived glossary's Boon/Bane entries match this specification (cross-checked 2026-09-19). Per DEC-109 the definitions above are canonical; the archived glossary stays archived.
+2. **Notation (resolved by DEC-112):** the archived source marked a Bane as `+1X`, which collided with the `2dX` die-size variable. Canonical notation is now `+1B` / `-1B`; the archived source retains its original notation.
+3. **Glossary consistency:** the archived glossary's Boon/Bane entries match this specification's rules (cross-checked 2026-09-19). Per DEC-109 the definitions above are canonical; the archived glossary stays archived.
 
 ## References <a id="references"></a>
 
-- Decisions: [DEC-102](../../02_decisions/01_master_decision_log.md) (terminology), DEC-103 (rule hierarchy), DEC-104 (link policy), DEC-109 (this migration), DEC-110 and DEC-111 (voice).
+- Decisions: [DEC-102](../../02_decisions/01_master_decision_log.md) (terminology), DEC-103 (rule hierarchy), DEC-104 (link policy), DEC-109 (this migration), DEC-110 and DEC-111 (voice), [DEC-112](../../02_decisions/01_master_decision_log.md) (notation).
 - Related specifications: [Core Checks and Dice Pools](01_checks_and_dice_pools.md), [Difficulty and Target Numbers](02_difficulty_and_target_numbers.md).
 - [Migration Manifest](../../00_architecture/migration_manifest.md) — migration provenance.
 - Archived source: `ttrpg_idealization_pre_reorganization_archive_2026-08-07/03_core_baseline_system/01_resolution_engine.md` (§5–6).

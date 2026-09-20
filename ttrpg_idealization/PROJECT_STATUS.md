@@ -42,7 +42,7 @@ Framework Spine directories, YAML registry skeleton, architecture-map skeleton, 
 
 - **Batch 1:** `01_checks_and_dice_pools.md` — locked spec, registry node `core.checks-and-pools`, DEC-102 terminology applied with in-spec note, open definitions listed. Re-voiced per DEC-110/111.
 - **Batch 2:** `02_difficulty_and_target_numbers.md` — locked spec (DC scale, vectors, check modes from archived §4 + 08); `13_tier_difficulty_vector_reference.md` relocated to `04_research/` with its dual canonical/research status reduced to research calibration (flagged in manifest); registry nodes `core.difficulty-and-target-numbers` and `research.tier-difficulty-vectors`, with the first `uses` and `tests` edges.
-- **Batch 3:** `03_boons_banes_and_die_steps.md` — locked spec (final-pool timing, cancellation, typed stacking, Boon/Bane effects with the one-die `d4` auto-failure chain, Die Step ordering); archived glossary Boon/Bane entries cross-checked consistent; notation collision (`X` Bane marker vs. `2dX` die-size variable) flagged in open definitions; registry node `core.boons-banes-and-die-steps` + `uses` edge to checks-and-pools.
+- **Batch 3:** `03_boons_banes_and_die_steps.md` — locked spec (final-pool timing, cancellation, typed stacking, Boon/Bane effects with the one-die `d4` auto-failure chain, Die Step ordering); archived glossary Boon/Bane entries cross-checked consistent. Amended on review by **DEC-112**: notation canonized as `+1B`/`-1B` (source `+1X` collision resolved) and Purpose/Die Steps prose rewritten per user-supplied text. Registry node `core.boons-banes-and-die-steps` + `uses` edge to checks-and-pools.
 
 ### Phase 4 (continued) — prose voice (2026-09-19)
 

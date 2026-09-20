@@ -12,6 +12,7 @@ Model: the D&D 3.5e Player's Handbook introduction. Warm, direct, plain.
 - Keep sentences plain and vary their length.
 - Be confident without selling.
 - Forgive the reader in advance where the material is dense ("You don't need to memorize this").
+- Say what a rule represents or does directly — avoid framing like "X is how the game says..."
 - Let the game's substance carry the excitement; don't add excitement of your own.
 
 ## Statement and example
