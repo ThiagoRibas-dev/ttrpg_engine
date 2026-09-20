@@ -1,0 +1,3 @@
+# AI Designer — 0726
+
+Researched terminology patterns. Pathfinder 2e uses “rules element” with Prerequisites, Frequency, Trigger, Requirements, Cost, Effect, and Special; Traits communicate interactions. D&D playtest materials package rules by player-facing categories and use rules glossaries, prerequisites, and effects rather than a formal “interface” term. Recommended replacing “interface” with “Rule interactions” or “Content interactions,” and using a small registry vocabulary based on requires, uses, grants, modifies, limits, tests, replaces, contains, and related. No organizational model files were revised pending terminology approval.

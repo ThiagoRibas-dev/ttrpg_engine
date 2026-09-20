@@ -1,0 +1,108 @@
+# Core Attributes & Mathless Derived Statistics Architecture
+
+To facilitate seamless backwards compatibility with **Dungeons & Dragons 3.5e** and provide universal familiarity across the TTRPG landscape, our system adopts the classic set of **Six Core Ability Scores (`STR, DEX, CON, INT, WIS, CHA`)**.
+
+Crucially, to eliminate traditional d20 design flaws (`such as the "Dexterity God-Stat" and semantic mental blurs`) while maintaining our mathless step pool engine, we establish a **Symmetrical Paired Derivation Architecture**. Two paired attributes (`one physical pair, one mental pair, and one hybrid physical/mental pair`) combine directly to generate our core defensive check pools and in-world resource tracks.
+
+---
+
+## 1. The Classic Six Ability Scores (`Step Dice Scale`)
+
+Every character and creature possesses six core attributes, rated as **Step Dice (`d4` to `d12`)**:
+
+```
+[ 3 Physical Attributes ]                   [ 3 Mental & Spiritual Attributes ]
+  ├── Strength (STR) — Muscle / Kinetic Force ├── Intelligence (INT) — Analytical Acuity / Spatial Logic
+  ├── Dexterity (DEX) — Speed / Precision     ├── Wisdom (WIS) — Willpower / Sensory Awareness
+  └── Constitution (CON) — Metabolic Vigor    └── Charisma (CHA) — Soul Identity / Force of Personality
+```
+
+| Ability Score | Abbr. | Physical / Mental Representation | Primary Check Applications |
+| :--- | :---: | :--- | :--- |
+| **Strength** | `STR` | Muscular density, raw kinetic force, lifting leverage, and physical momentum. | Melee weapon strikes (`Combat Mastery`), breaking doors, athletics, carrying capacity slots. |
+| **Dexterity** | `DEX` | Whole-body coordination, manual dexterity, reflexes, balance, and precision. | Finesse melee strikes, archery (`Combat Mastery`), acrobatics, stealth, lockpicking. |
+| **Constitution** | `CON` | Metabolic health, tissue vitality, cardiovascular endurance, and toxin resistance. | Physical stamina checks, surviving extreme climates, resisting poisons and bleeding. |
+| **Intelligence** | `INT` | Analytical logic, memory capacity, spatial geometry, and arcane formula comprehension. | Deciphering ancient lore, casting complex arcane spells, tactical battlefield analysis. |
+| **Wisdom** | `WIS` | Mental discipline, sensory vigilance, emotional poise, and divine/primal connection. | Spotting hidden traps (`Perception`), resisting mind blasts, channeling divine/primal miracles. |
+| **Charisma** | `CHA` | Force of personality, social magnetism, aura projection, and innate soul resonance. | Diplomacy, intimidation, leadership command, channeling innate sorcery/pact magic. |
+
+---
+
+## 2. Paired Symmetrical Defenses (`Fortitude, Reflexes, Willpower`)
+
+Instead of isolating single attributes for saving throws (`e.g., 3.5e Reflex = Dex only`), our system pairs two attributes (`1d(Attr 1) + 1d(Attr 2) keep highest`) to form the baseline `2dX` check pool for each of the three classic defenses.
+
+```
+       [ Core Ability Score Pairs ] ────────► [ Derived Mathless Defense Pool (`2dX keep highest`) ]
+  ├── Strength (STR) + Constitution (CON)    ──► Fortitude Pool (`Purely Physical Resilience`)
+  ├── Dexterity (DEX) + Intelligence (INT)   ──► Reflexes Pool (`Hybrid Physical + Mental/Tactical Evasion`)
+  └── Wisdom (WIS) + Charisma (CHA)          ──► Willpower Pool (`Purely Mental & Spiritual Resilience`)
+```
+
+### 2.1 Why Paired Derivation is a Simulationist Breakthrough
+1. **Fortitude (`STR + CON` — Purely Physical):** Resisting lethal poisons, crushing pressure, or massive physical shock requires both metabolic tissue health (`CON`) and structural skeletal/muscular bulk (`STR`).
+2. **Reflexes (`DEX + INT` — Hybrid Physical + Mental):** Dodging a sudden fireball, a falling portcullis, or a sprung trap is not just raw physical speed (`DEX`); it is spatial geometry, situational alertness, and analytical reaction speed (`INT`)! This hybrid linkage ensures intelligent scholars aren't helpless sitting ducks against area hazards.
+3. **Willpower (`WIS + CHA` — Purely Mental/Spiritual):** Resisting psychic domination, terrifying dragon auras, and death curses requires both emotional grit/mental discipline (`WIS`) and the innate spiritual force/soul identity of the self (`CHA`).
+
+### 2.2 Paired Check Pool Formula (`How to Roll`)
+When a character must make an opposed defense check (`Fortitude, Reflexes, or Willpower`), they assemble their base pool from their two paired step dice:
+
+$$\text{Base Defense Pool} = 1d(\text{Attribute 1}) + 1d(\text{Attribute 2}) \longrightarrow \text{Keep Highest Face}$$
+
+- **Example 1 (`Fortitude Check`):** If your `STR` is `d8` and `CON` is `d10`, your Fortitude check pool is **`1d8 + 1d10 keep highest`**.
+- **Example 2 (`Reflexes Check`):** If your `DEX` is `d10` and `INT` is `d8`, your Reflexes check pool is **`1d10 + 1d8 keep highest`**.
+- **Example 3 (`Willpower Check`):** If your `WIS` is `d8` and `CHA` is `d12`, your Willpower check pool is **`1d8 + 1d12 keep highest`**.
+- **Applying Boons (`+1B, +2B`):** If a class feature or feat grants a Boon (`+1B`) on a defense check (`e.g., Lightning Reflexes feat grants +1B on Reflex checks`), add $+1\text{ die of your highest paired attribute (`e.g., add +1d10 to your DEX+INT pool -> 2d10 + 1d8 keep highest`)}$!
+
+---
+
+## 3. The Complete 4-Layer Defense Model (`Where Parry & Soak Fit`)
+
+When an incoming attack or spell is declared against a character, the GM checks which layer is targeted:
+
+```
+                          [ Incoming Attack / Threat Declared ]
+                                           │
+                    ┌──────────────────────┴──────────────────────┐
+                    ▼                                             ▼
+        [ Physical Kinetic Strike ]                     [ Magical / Internal Threat ]
+                    │                                             │
+         ┌──────────┴──────────┐                       ┌──────────┴──────────┐
+         ▼                     ▼                       ▼                     ▼
+Layer 1: Reflexes       Layer 2: Parry          Layer 3: Fort / Will   Layer 4: Soak Rank
+ (DEX+INT Dodge Pool)  (Combat Mastery Pool)     (Paired Saving Pool)   (Armor Step Die)
+```
+
+| Defense Layer | Derivation Source | Core Mechanics & Intuitive Trigger |
+| :--- | :--- | :--- |
+| **1. Reflexes (`Evasion`)** | **`DEX + INT` Paired Pool**<br>*(e.g., `1dDEX + 1dINT keep highest`)* | Used when dodging ranged projectiles, traps, and area blasts (`AoE Fireball`). In `Mode 2/3 Contests`, target rolls Reflexes vs Attacker check pool. |
+| **2. Parry (`Active Guard`)** | **`Combat Mastery` Domain Pool**<br>*(e.g., `3d10 keep highest`)* | Used when actively deflecting melee strikes (`costs 1 Reaction [1R] or 1 Stamina`). Opposed roll vs Attacker combat pool. |
+| **3. Resilience (`Fort / Will`)**| **Fortitude:** `STR + CON` Pool<br>**Willpower:** `WIS + CHA` Pool | Used against internal threats. `Fortitude` opposes poison, disease, and petrification. `Willpower` opposes mind blasts, fear, and curses. |
+| **4. Soak Rank (`Armor Reduction`)** | Exclusively **Equipped Armor & Hide**<br>*(e.g., `d4 Cloth` $\to$ `d12 Plate`)* | **Checked post-hit.** Compare `Attacker Damage Die Face vs Defender Soak Die Face`. If `Damage <= Soak`, kinetic shock absorbed (`0 Wounds`). |
+
+---
+
+## 4. In-World Resource Tracks (`Base Capacity Formulas`)
+
+Our five in-world resource pools are derived directly from the **Max Face Values** of our classic six ability scores, eliminating multiplication or table arithmetic:
+
+| Resource Track | Derivation Formula (`Classic 6 Scores`) | Example (`STR d8, DEX d10, CON d10, INT d8, WIS d6, CHA d8`) | What This Represents Physically |
+| :--- | :--- | :--- | :--- |
+| **1. Vitality (`HP`)** | `STR Die Max + CON Die Max` | $8 + 10 = \mathbf{18\text{ Base Vitality}}$ | Represents physical tissue density (`CON`) and muscular/skeletal bulk (`STR`). Scales cleanly as attributes step up! |
+| **2. Stamina (`Poise`)** | `2 x CON Die Max`<br>*(or `CON Max + DEX Max`)* | $10 + 10 = \mathbf{20\text{ Base Stamina}}$ | Represents aerobic capacity, cardiovascular health, and muscle glucose reserves. |
+| **3. Focus (`Acuity`)** | `WIS Die Max + INT Die Max`<br>*(or `WIS Max + CHA Max`)* | $6 + 8 = \mathbf{14\text{ Base Focus}}$ | Represents mental discipline and magical energy channeling capacity. |
+| **4. Durability Slots** | Governed by **Item Material & Quality** | `1 to 4 Slots per item` | Material properties (`Steel vs Adamantine`) dictate item integrity independently of character stats. |
+| **5. Encumbrance Slots** | `STR Die Max + 4 Slots` | $8 + 4 = \mathbf{12\text{ Encumbrance Slots}}$ | Exact capacity for weapons, heavy armor, shields, and travel rations before suffering $-1\text{ Step-Down}` penalty. |
+
+---
+
+## 5. Initiative & Tactical Speed (`Reflex & Perception Interaction`)
+
+### 5.1 Mathless Initiative Check (`Turn Order`)
+At the start of combat, characters roll initiative based on situational awareness:
+- **Physical Ambush / Reflexive Sprint:** Roll **Reflexes Pool (`1dDEX + 1dINT keep highest`)**.
+- **Tactical Assessment / Prepared Guard:** Roll **`2dWIS` (`Perception vigilance`)** or **`2dINT` (`Tactical logic`)**.
+
+### 5.2 Movement Speed (`STR/DEX Balance`)
+- **Standard Base Speed:** All Medium and Small actors have a base `[1A] Stride` of **30 feet (`1 Distance Tier shift / 6 Grid Squares`)**.
+- **Heavy Armor Mitigation:** Wearing Heavy Plate (`Soak d10/d12`) normally reduces speed to **20 feet**, unless the character possesses **`STR d10+`**, which allows them to carry the heavy steel bulk effortlessly at full 30-foot speed!

@@ -1,0 +1,189 @@
+version: 1
+project: ttrpg-framework-rewrite
+status: active
+
+# Source of truth for formal document relationships.
+# Relationship vocabulary: APPROVED per DEC-106 (requires, uses, grants,
+# modifies, limits, tests, replaces, contains, related).
+# See relationship_vocabulary.md for definitions and scope rules.
+#
+# Generated views (indexes, diagrams, impact reports) are produced on demand
+# from this file and are never hand-maintained (DEC-105).
+#
+# Layering rule (framework spine): later layers may `uses`/`modifies` earlier
+# procedures; earlier layers must not `requires` later layers; a hard
+# `requires` cycle is a validation warning.
+#
+# Seeded 2026-08-29 per DEC-107. Core Engine Batches 1-2 migrated
+# 2026-09-18/19 (DEC-109); first research node registered with Batch 2.
+
+nodes:
+  - id: framework
+    title: TTRPG Framework (root)
+    kind: framework-root
+    status: active
+    path: README.md
+    tags: [architecture]
+
+  - id: area.core-engine
+    title: 01 Core Engine
+    kind: framework-area
+    status: in-progress
+    path: 01_framework/01_core_engine/README.md
+    tags: [architecture, resolution]
+
+  - id: area.actor
+    title: 02 Actor Framework
+    kind: framework-area
+    status: planned
+    path: 01_framework/02_actor_framework/README.md
+    tags: [architecture, actor]
+
+  - id: area.adventure
+    title: 03 Adventure Framework
+    kind: framework-area
+    status: planned
+    path: 01_framework/03_adventure_framework/README.md
+    tags: [architecture, adventure]
+
+  - id: area.conflict
+    title: 04 Conflict Framework
+    kind: framework-area
+    status: planned
+    path: 01_framework/04_conflict_framework/README.md
+    tags: [architecture, conflict]
+
+  - id: area.magic
+    title: 05 Magic Framework
+    kind: framework-area
+    status: planned
+    path: 01_framework/05_magic_framework/README.md
+    tags: [architecture, magic]
+
+  - id: area.equipment
+    title: 06 Equipment Framework
+    kind: framework-area
+    status: planned
+    path: 01_framework/06_equipment_framework/README.md
+    tags: [architecture, equipment]
+
+  - id: area.world-gm
+    title: 07 World and GM Framework
+    kind: framework-area
+    status: planned
+    path: 01_framework/07_world_and_gm_framework/README.md
+    tags: [architecture, world, gm]
+
+  - id: area.reference
+    title: 08 Framework Reference
+    kind: framework-area
+    status: planned
+    path: 01_framework/08_framework_reference/README.md
+    tags: [architecture, reference]
+
+  - id: core.checks-and-pools
+    title: Core Checks and Dice Pools
+    kind: canonical-specification
+    status: locked
+    path: 01_framework/01_core_engine/01_checks_and_dice_pools.md
+    tags: [resolution, checks, dice-pools, dec-109]
+    publication:
+      target: framework-core
+      part: core-engine
+      order: 10
+
+  - id: core.difficulty-and-target-numbers
+    title: Difficulty and Target Numbers
+    kind: canonical-specification
+    status: locked
+    path: 01_framework/01_core_engine/02_difficulty_and_target_numbers.md
+    tags: [resolution, difficulty, dc, dec-109]
+    publication:
+      target: framework-core
+      part: core-engine
+      order: 20
+
+  - id: research.tier-difficulty-vectors
+    title: Tier Difficulty Vector Reference (calibration)
+    kind: research-reference
+    status: active
+    path: 04_research/probability_and_calibration/tier_difficulty_vector_reference.md
+    tags: [research, calibration, difficulty, probability]
+
+  - id: arch.map
+    title: Framework Architecture Map
+    kind: architecture-document
+    status: active
+    path: 00_architecture/framework_architecture_map.md
+    tags: [architecture, navigation]
+
+  - id: arch.relationship-vocabulary
+    title: Registry Relationship Vocabulary
+    kind: architecture-document
+    status: locked
+    path: 00_architecture/relationship_vocabulary.md
+    tags: [architecture, vocabulary, dec-106]
+
+edges:
+  # Structural spine (contains = placement only, no dependency)
+  - from: framework
+    to: area.core-engine
+    relation: contains
+  - from: framework
+    to: area.actor
+    relation: contains
+  - from: framework
+    to: area.adventure
+    relation: contains
+  - from: framework
+    to: area.conflict
+    relation: contains
+  - from: framework
+    to: area.magic
+    relation: contains
+  - from: framework
+    to: area.equipment
+    relation: contains
+  - from: framework
+    to: area.world-gm
+    relation: contains
+  - from: framework
+    to: area.reference
+    relation: contains
+
+  # Core Engine specifications
+  - from: area.core-engine
+    to: core.checks-and-pools
+    relation: contains
+  - from: area.core-engine
+    to: core.difficulty-and-target-numbers
+    relation: contains
+
+  # Core Engine internal semantics
+  - from: core.checks-and-pools
+    to: core.difficulty-and-target-numbers
+    relation: uses
+
+  # Research calibrates canonical procedures
+  - from: research.tier-difficulty-vectors
+    to: core.difficulty-and-target-numbers
+    relation: tests
+
+  # Architecture documents (informational cross-links)
+  - from: arch.map
+    to: arch.relationship-vocabulary
+    relation: related
+
+build_targets:
+  - id: framework-core
+    title: Framework Core
+    status: future
+  - id: player-guide
+    title: Player Guide
+    status: future
+  - id: gm-guide
+    title: GM Guide
+    status: future
+  - id: quick-reference
+    title: Quick Reference
+    status: future

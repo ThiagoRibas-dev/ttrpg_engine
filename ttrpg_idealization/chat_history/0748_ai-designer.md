@@ -1,0 +1,3 @@
+# AI Designer — 0748
+
+Re-gave the status recap in plain English. Summary delivered: repository reorganization finished (old files safely archived in a sibling folder, new clean structure in place); the registry relationship vocabulary was approved as decision DEC-106; the architecture map was filled in and the machine-readable registry was seeded as decision DEC-107; the decision log runs through DEC-107. Next steps offered: (1) validate the stable-anchor link syntax in the Markdown renderer the user actually uses, then (2) migrate the first real rules content — the Core Engine (checks, step dice, dice pools, boons/banes) — from the archived resolution engine document into the new framework structure.

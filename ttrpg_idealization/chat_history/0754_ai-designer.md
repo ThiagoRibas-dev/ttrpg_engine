@@ -1,0 +1,7 @@
+# AI Designer — 0754
+
+Recorded the anchor validation outcome as **DEC-108 — Stable-Anchor Syntax Validated, DEC-104 Confirmed** (2026-09-18, VS Code built-in Markdown preview): Tests A, C, D, E, F pass — `<a id>` heading anchors, auto-slugs, `{#id}` attributes, cross-file `path#anchor` links, and bare out-of-heading anchors all work; legacy `<a name>` (Test B) fails and is rejected. DEC-104 stands unchanged; the test document is retained as a regression check for future renderers. Reorg model §15.5 struck as resolved.
+
+Files updated: decision log (DEC-108 row), `anchor_syntax_validation_test.md` (results table filled, outcome recorded), `PROJECT_STATUS.md` (Phase 4 continued section; next operation = 01 Core Engine migration), `framework_architecture_map.md` (anchor risk bullet removed from §9; §10 notes DEC-108), `03_workflows/validation/README.md` (active, lists the regression test).
+
+Operational incident, recorded for future turns: batching multiple `edit_file` calls against the **same file** in one parallel block caused edits to clobber each other while still reporting success — three changes were silently lost. The post-edit python3 validation caught it; the lost edits were re-applied (same-file changes combined into single edits) and the full 14-point re-validation passed. Rule going forward: edits to the same file are applied sequentially or combined into one call, never batched in parallel.

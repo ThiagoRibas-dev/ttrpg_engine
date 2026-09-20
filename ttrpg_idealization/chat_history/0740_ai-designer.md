@@ -1,0 +1,3 @@
+# AI Designer — 0740
+
+Completed Phase 1 and Phase 2 of the framework reorganization. Renamed the prior project root to the immutable sibling archive `/home/user/ttrpg_idealization_pre_reorganization_archive_2026-08-07` after creating its preservation manifest and SHA-256 file list. Created the fresh `/home/user/ttrpg_idealization` framework root with the approved directory scaffold, YAML registry skeleton, architecture map, migration manifest, generated-view policy, continued DEC log, copied chat history, and no migrated canonical rules. The next step is approval of registry relationship vocabulary and selection of the first case-by-case framework migration area.

@@ -1,0 +1,3 @@
+# AI Designer — 0698
+
+Acknowledged that no general protected-primary-Tradition rule had been approved; it was an unsupported conversion assumption. Recorded DEC-099: Class tables decide Magic Mastery-only Investment grants, with two such Investments at a Spell Slot Advancement level as the normal caster-class baseline. Updated progression rules and tracking documents. Revised Triel’s class-skill rebuild to model 34 Magic Mastery-only Investments across 17 Slot Advancements, yielding Legend Divine/War/Life/Law; Hero Light/Death/Good; and Veteran Spirit without assuming protected Tradition progression.

@@ -1,0 +1,12 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local snapshots / backups
+*.tar.gz
+*.zip
+
+# Generated views are produced on demand (DEC-105) — keep the README only
+ttrpg_idealization/00_architecture/generated/*
+!ttrpg_idealization/00_architecture/generated/README.md

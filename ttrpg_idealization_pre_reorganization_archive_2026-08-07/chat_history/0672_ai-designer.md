@@ -1,0 +1,3 @@
+# AI Designer — 0672
+
+Created the non-canonical conversion stress test `05_conversion_and_content_engine/classes/02_triel_fitheaben_level_20_provisional_conversion.md`. It models Triel's identity, legal Attribute progression, provisional resource and defense tracks, all 25 manual Skill Investments under current-Class Skill-list access, 17 Spell Slot Advancements, bounded equipment translation, feature conversion targets, and the unresolved procedures exposed by the exercise. Verified selected legacy class features with external source checks and linked the artifact from the Class Modeling Workspace README.

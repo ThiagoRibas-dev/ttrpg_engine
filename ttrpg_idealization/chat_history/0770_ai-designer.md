@@ -1,0 +1,11 @@
+# AI Designer — 0770
+
+Executed **Core Engine Batch 2 — Difficulty and Target Numbers** (per DEC-109, user-approved).
+
+- New canonical spec `01_framework/01_core_engine/02_difficulty_and_target_numbers.md`: bounded DC scale 2–12 with the seven working descriptions (Trivial → Extreme), difficulty vector notation and positional comparison (with a worked 5d8 vs DC 6,5,3 example in the DEC-111 statement/example style), and archived 08's check-mode/statistical relationships consolidated (ceiling/pool split, fixed-DC vs vector vs opposed, multi-success counting, bounded d12/DC 12). Voice per DEC-110/111 throughout; 2 em-dashes; no deprecated terms.
+- Open definitions recorded: calibration still a research task; **DC 4/6/8/10 have no working names in the source** (newly surfaced fidelity observation); the research table's Tier-pool compositions depend on archived leveling decisions (DEC-095) and need re-validation when the Actor layer migrates.
+- `13_tier_difficulty_vector_reference.md` relocated to `04_research/probability_and_calibration/tier_difficulty_vector_reference.md` with a provenance header and a **flagged status change**: the archived dual status "Canonical Tier Difficulty Vector Reference and research calibration artifact" is reduced to research calibration reference per DEC-109; body tables copied verbatim; internal archive paths repaired (the archive's Source line was a bare filename — pre-existing ambiguity, fixed to the full archive path).
+- Registry grew to 14 nodes / 13 edges: nodes `core.difficulty-and-target-numbers` and `research.tier-difficulty-vectors`; first semantic edges — `core.checks-and-pools uses core.difficulty-and-target-numbers` and `research.tier-difficulty-vectors tests core.difficulty-and-target-numbers`.
+- Cross-reference payoff: Batch 1 spec's scope now links directly to the Batch 2 spec. Manifest (Batch 2 migrated + research relocation rows), Core Engine README, PROJECT_STATUS, and architecture map (spine row + §10) updated.
+
+Validation: 29 checks — one real failure caught and fixed (research file used `../../../` where repo root is `../../` from its location; archive sibling link correctly kept at `../../../`), then full pass: links, anchors, registry integrity (incl. no `requires` edges from core specs — layering rule holds), faithful-content and voice scans. Spec presented to the user.
