@@ -74,7 +74,7 @@ Resolving against a DC or vector yields success or failure. Counted-successes ou
 ## Rule Interactions <a id="rule-interactions"></a>
 
 - [Core Checks and Dice Pools](01_checks_and_dice_pools.md) **uses** this scale at steps 7 and 9 of the core check.
-- Boons, Banes, and Die Steps **modify** the pool that reads this scale (Batch 3 specification); they affect the pool, never the DC or vector itself.
+- Boons, Banes, and Die Steps **modify** the pool that reads this scale ([Batch 3 specification](03_boons_banes_and_die_steps.md)); they affect the pool, never the DC or vector itself.
 - Maneuvers and complex checks **use** vectors as Required Successes (Conflict Framework).
 - The [Tier Difficulty Vector Reference](../../04_research/probability_and_calibration/tier_difficulty_vector_reference.md) **tests** this scale: it is the suggested calibration data for choosing DCs and vectors by Tier.
 - The World/GM layer will consume the working descriptions when it migrates.

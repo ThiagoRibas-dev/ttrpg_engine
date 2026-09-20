@@ -14,7 +14,7 @@ status: active
 # procedures; earlier layers must not `requires` later layers; a hard
 # `requires` cycle is a validation warning.
 #
-# Seeded 2026-08-29 per DEC-107. Core Engine Batches 1-2 migrated
+# Seeded 2026-08-29 per DEC-107. Core Engine Batches 1-3 migrated
 # 2026-09-18/19 (DEC-109); first research node registered with Batch 2.
 
 nodes:
@@ -103,6 +103,17 @@ nodes:
       part: core-engine
       order: 20
 
+  - id: core.boons-banes-and-die-steps
+    title: Boons, Banes, and Die Steps
+    kind: canonical-specification
+    status: locked
+    path: 01_framework/01_core_engine/03_boons_banes_and_die_steps.md
+    tags: [resolution, boons, banes, die-steps, dec-109]
+    publication:
+      target: framework-core
+      part: core-engine
+      order: 30
+
   - id: research.tier-difficulty-vectors
     title: Tier Difficulty Vector Reference (calibration)
     kind: research-reference
@@ -158,10 +169,16 @@ edges:
   - from: area.core-engine
     to: core.difficulty-and-target-numbers
     relation: contains
+  - from: area.core-engine
+    to: core.boons-banes-and-die-steps
+    relation: contains
 
   # Core Engine internal semantics
   - from: core.checks-and-pools
     to: core.difficulty-and-target-numbers
+    relation: uses
+  - from: core.boons-banes-and-die-steps
+    to: core.checks-and-pools
     relation: uses
 
   # Research calibrates canonical procedures

@@ -1,0 +1,3 @@
+# AI Designer — 0780
+
+Restated the recap in plain English: project backed up on GitHub (3 commits, current); uploads ruling recorded (they get added one at a time, only when asked); the core dice-rules rewrite is at 2 of 5 pieces done (how checks work; how hard tasks are). Next is piece 3: boons and banes (advantages/disadvantages — cancel one-for-one, five stacking types, a boon adds a die, a bane removes one, a bane on your last die shrinks it instead, and on the smallest die it means automatic failure) and die steps (dice growing or shrinking one size, applied before boons/banes; the d12-to-d20 Exert exception). Offered to write, register, check, and show it for review before pushing, on the user's go.

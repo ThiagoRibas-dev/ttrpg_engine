@@ -26,7 +26,7 @@ This is Pillar 1 of the [Core Design Pillars](../../../ttrpg_idealization_pre_re
 
 **Does not own:**
 - Difficulty Classes and difficulty vectors: [Batch 2 specification](02_difficulty_and_target_numbers.md).
-- Boons, Banes, and Die Step-Up / Step-Down mechanics: Batch 3 specification.
+- Boons, Banes, and Die Step-Up / Step-Down mechanics: [Batch 3 specification](03_boons_banes_and_die_steps.md).
 - Opposed contests and Automatic Successes: Batch 4 specification.
 - Attribute assignment and Competency Rank definitions: Actor Framework.
 - Resource costs and the Exert maneuver procedure: owning layer to be determined.
@@ -90,7 +90,7 @@ A check resolves to an outcome: success, failure, or a counted-successes result 
 ## Rule Interactions <a id="rule-interactions"></a>
 
 - Skills, Traditions, and defenses **use** this procedure to resolve attempts (their specifications live in the Actor, Magic, and Conflict layers).
-- Boons/Banes and Die Step-Ups/Downs **modify** the final pool at steps 5–6 (Batch 3 specification).
+- Boons/Banes and Die Step-Ups/Downs **modify** the final pool at steps 5–6 ([Batch 3 specification](03_boons_banes_and_die_steps.md)).
 - Class features, Feats, Spells, and Equipment **grant** additional pool dice (Enhanced Dice Pool) or Access/Exceptions touching pool construction.
 - Exert **modifies** the ladder ceiling (`d12` → `d20`) under its own procedure.
 - No content may bypass or alter the core procedure without an explicit Exception (DEC-103 rule hierarchy).
