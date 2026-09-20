@@ -51,6 +51,7 @@ The project is published at `https://github.com/ThiagoRibas-dev/ttrpg_engine` (p
   `git clone --filter=blob:none --no-checkout <url> && cd ttrpg_engine && git sparse-checkout set ttrpg_idealization && git checkout main`
 - **Commit identity:** `ThiagoRibas-dev <56689080+ThiagoRibas-dev@users.noreply.github.com>`.
 - **Before every push:** grep the repo for `github_pat_` (must be zero hits) and confirm `git status` is clean after the commit.
+- **Uploads stay out of the repo** (user ruling, 2026-09-19): the workspace `uploads/` directory is reference material only. Files are incorporated case-by-case — into research, conversion notes, or content — when explicitly migrated; never bulk-published.
 
 ## Chat history
 
