@@ -27,7 +27,7 @@ This is Pillar 1 of the [Core Design Pillars](../../../ttrpg_idealization_pre_re
 **Does not own:**
 - Difficulty Classes and difficulty vectors: [Batch 2 specification](02_difficulty_and_target_numbers.md).
 - Boons, Banes, and Die Step-Up / Step-Down mechanics: [Batch 3 specification](03_boons_banes_and_die_steps.md).
-- Opposed contests and Automatic Successes: Batch 4 specification.
+- Opposed contests and Automatic Successes: [Batch 4 specification](04_opposed_checks_and_automatic_successes.md).
 - Attribute assignment and Competency Rank definitions: Actor Framework.
 - Resource costs and the Exert maneuver procedure: owning layer to be determined.
 - Maneuver consequences: Conflict Framework.

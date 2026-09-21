@@ -28,7 +28,7 @@ This specification also owns Die Step-Up and Die Step-Down: the mechanics that g
 - The core check and pool construction: [Core Checks and Dice Pools](01_checks_and_dice_pools.md).
 - What grants Boons, Banes, or Steps: the specific Classes, Feats, Spells, Equipment, Traditions, and Conditions that carry them (Actor, Magic, and Equipment layers, pending migration).
 - Difficulty Classes and vectors: [Difficulty and Target Numbers](02_difficulty_and_target_numbers.md). Boons and Banes change your pool, never the target.
-- Automatic Successes: Batch 4 specification.
+- Automatic Successes: [Batch 4 specification](04_opposed_checks_and_automatic_successes.md).
 - Exert's maneuver procedure (the temporary `d12` → `d20` exception): owner undecided, tracked in [Batch 1's open definitions](01_checks_and_dice_pools.md#open-definitions).
 - Resource costs and limits: each specific rule that calls for a Step or an Exert provides them.
 
@@ -111,7 +111,7 @@ Boons, Banes, and Die Steps modify one check's final pool and nothing else. They
 - This procedure works on the final pool built by [Core Checks and Dice Pools](01_checks_and_dice_pools.md), at steps 5 and 6 of the core check.
 - The modified pool may be read against [Difficulty and Target Numbers](02_difficulty_and_target_numbers.md); Boons and Banes never change the DC or vector.
 - Classes, Feats, Spells, Equipment, and Conditions **grant** Boons, Banes, and Steps; their specifications live in the Actor, Magic, Equipment, and Conflict layers.
-- Automatic Successes (Batch 4 specification) are not dice and are unaffected by anything here.
+- Automatic Successes ([Batch 4 specification](04_opposed_checks_and_automatic_successes.md)) are not dice and are unaffected by anything here.
 - Exert **modifies** the `d12` ceiling under its own procedure (owner pending).
 
 Formal edges live in the [Framework Registry](../../00_architecture/framework_registry.yaml), not in this file.

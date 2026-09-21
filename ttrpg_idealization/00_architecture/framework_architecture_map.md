@@ -52,7 +52,7 @@ Dependency/authority layering (arrows = "is available to"):
 
 | Layer | Owns (future) | Status |
 |---|---|---|
-| 01 Core Engine | Check resolution, opposed checks, step dice, pools, Boons/Banes | In progress — Batches 1–3/5 migrated ([checks & pools](../01_framework/01_core_engine/01_checks_and_dice_pools.md), [difficulty](../01_framework/01_core_engine/02_difficulty_and_target_numbers.md), [boons & steps](../01_framework/01_core_engine/03_boons_banes_and_die_steps.md); DEC-109) |
+| 01 Core Engine | Check resolution, opposed checks, step dice, pools, Boons/Banes | In progress — Batches 1–4/5 migrated ([checks & pools](../01_framework/01_core_engine/01_checks_and_dice_pools.md), [difficulty](../01_framework/01_core_engine/02_difficulty_and_target_numbers.md), [boons & steps](../01_framework/01_core_engine/03_boons_banes_and_die_steps.md), [opposed & automatic](../01_framework/01_core_engine/04_opposed_checks_and_automatic_successes.md); DEC-109) |
 | 02 Actor Framework | Attributes, derived statistics, resources, skills, leveling | Planned |
 | 03 Adventure Framework | Exploration, downtime, activities, crafting | Planned |
 | 04 Conflict Framework | Combat exchange, defenses, maneuvers, conditions | Planned |
@@ -108,7 +108,7 @@ Continuous log (DEC-001 → present): [Master Decision Log](../02_decisions/01_m
 
 ## 10. Migration State <a id="map-migration"></a>
 
-Current: reorg model Phase 4 started — architecture map + registry seed (DEC-106/107), anchor syntax validated (DEC-108), Core Engine Batches 1–3 of 5 migrated (DEC-109: checks & pools, difficulty & target numbers, boons/banes & die steps), and the first research artifact registered (Tier Difficulty Vector calibration). Next: Core Engine **Batch 4 — opposed checks and automatic successes**. Progress table: [Migration Manifest](migration_manifest.md).
+Current: reorg model Phase 4 started — architecture map + registry seed (DEC-106/107), anchor syntax validated (DEC-108), Core Engine Batches 1–4 of 5 migrated (DEC-109: checks & pools, difficulty & target numbers, boons/banes & die steps, opposed checks & automatic successes), and the first research artifact registered (Tier Difficulty Vector calibration). Next: Core Engine **Batch 5 — engine boundaries**, the final Core Engine batch. Progress table: [Migration Manifest](migration_manifest.md).
 
 ## Navigation
 
