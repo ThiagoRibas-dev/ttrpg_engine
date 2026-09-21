@@ -7,7 +7,7 @@
 
 ## Purpose <a id="purpose"></a>
 
-When two characters pit themselves directly against each other — an arm-wrestling match, a pickpocket's fingers against a sentry's ears, a fencer's lunge against a duelist's parry — neither side rolls against a number on the wall. Both build pools, both roll, and the dice settle it between them.
+When two characters pit themselves directly against each other — a pickpocket's fingers against a sentry's ears, or a fencer's lunge against a duelist's parry — neither side rolls against a number on the wall. Both build pools, both roll, and the dice settle it between them.
 
 This specification also owns Automatic Successes: successes that a specific rule grants you outright, with no die involved. For example, an expert burglar's climb spell might guarantee one success on the wall she's scaling, so she only needs to roll for the rest.
 

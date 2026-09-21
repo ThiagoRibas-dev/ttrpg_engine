@@ -7,7 +7,7 @@
 
 ## Purpose <a id="purpose"></a>
 
-This is the engine that runs the whole game. When your character tries something that might fail — picking a lock, swinging a sword, calming an angry innkeeper — you roll dice to find out what happens.
+This is the engine that runs the whole game. When your character tries something that might fail — picking a lock, or calming an angry innkeeper — you roll dice to find out what happens.
 
 There is no arithmetic at the table. When you roll the dice, you don't add a Strength bonus or subtract a cover penalty.
 

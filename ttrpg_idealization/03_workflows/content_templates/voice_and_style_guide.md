@@ -32,7 +32,7 @@ Do (statement, then example; two mechanics in one example):
 ## Banned constructions (AI-isms)
 
 - **Unnecessary contrasts:** "not just X — Y," "zero X," and similar constructions that dramatize a plain fact.
-- **Rule-of-three abuse:** don't land every sentence on a triad for rhythm. Lists are fine when the content is genuinely a list.
+- **Rule-of-three abuse:** don't land every sentence on a triad for rhythm. Example sets are the common failure mode: one or two examples usually suffice, and a third must earn its place by carrying content. Lists are fine when the count is genuinely the content's (a three-threshold vector naming three actions is correct; three flavor examples is not).
 - **Punchy taglines and puns.**
 - **Grandiose metaphors** doing persuasion work.
 - **Em-dash flourish cadence** as the default rhythm; use dashes for genuine asides, sparingly.
