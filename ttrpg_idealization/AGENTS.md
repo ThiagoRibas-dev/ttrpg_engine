@@ -44,9 +44,10 @@ The project is published at `https://github.com/ThiagoRibas-dev/ttrpg_engine` (p
 
 - **Layout:** both trees are siblings inside the repo, which is what keeps every relative archive link working.
 - **Credentials:** a fine-grained throwaway PAT lives at `~/.git-creds/github_token` (600), used via the askpass script `~/.git-creds/git-askpass.sh` (700) and `core.askPass` in `~/.gitconfig` (all outside the repo and outside git). Never commit, echo, or record the token; redact it from chat-history records. The user can revoke it at any time.
-- **Snapshot caveat:** workspace snapshots do not persist `.git/config`. At the start of a new session, restore the remote before pushing:
+- **Snapshot caveat:** workspace snapshots do not persist `.git/config`, and files restored from snapshot may lose executable permissions. At the start of a new session, before pushing:
   `git -C /home/user/ttrpg_engine remote add origin https://github.com/ThiagoRibas-dev/ttrpg_engine.git`
-  The global config (askpass, identity) persists in `~/.gitconfig` and needs no restore.
+  `chmod 700 ~/.git-creds/git-askpass.sh && chmod 600 ~/.git-creds/github_token`
+  The global config (askpass, identity) persists in `~/.gitconfig` and needs no restore. (Both caveats fired for real on 2026-09-23; the restore took under a minute.)
 - **Cloning without the archive** (limited storage): partial clone + sparse checkout, as documented in the repo `README.md`:
   `git clone --filter=blob:none --no-checkout <url> && cd ttrpg_engine && git sparse-checkout set ttrpg_idealization && git checkout main`
 - **Commit identity:** `ThiagoRibas-dev <56689080+ThiagoRibas-dev@users.noreply.github.com>`.
