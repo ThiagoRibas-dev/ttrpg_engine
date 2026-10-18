@@ -1,0 +1,7 @@
+# AI Designer — 0793 checkpoint report (interim)
+
+*(Full report delivered in-turn; this record summarizes it.)*
+
+Verified state from the filesystem (not memory): local and remote `main` both at `d2b2885` after running the documented session-restore procedure (the snapshot again dropped `origin` and the askpass exec bit between turns — the hardened AGENTS.md block handled both); 1,743 tracked files; working tree clean apart from this turn's records. Registry: 16 nodes (4 canonical specs) / 17 edges (12 contains, 3 uses, 1 tests, 1 related). Decision log through DEC-112. Chat history through 0792 at turn start.
+
+Checkpoint delivered as a structured report: completed-and-committed work (reorganization phases 1–2, architecture map + registry seed, anchor validation, Core Engine Batches 1–4 with review amendments, voice standards, GitHub publishing with policies and hardened restore procedure); uncommitted items (none beyond this turn's chat records, per the every-turn commit-and-push policy); and the ongoing queue (Core Engine Batch 5 as the immediate next task; per-spec open definitions — 15 across the four specs, including the `DC 9 (3)` shorthand, surplus Automatic Successes, Exert's owner, unnamed DCs 4/6/8/10, pool-range boundary; reorg §15 items 2/3/6; terminology questions from the matrix; Phase 5 reclassification; Conflict layer as the recommended next migration area after the Core Engine completes).
