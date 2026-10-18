@@ -14,8 +14,9 @@ status: active
 # procedures; earlier layers must not `requires` later layers; a hard
 # `requires` cycle is a validation warning.
 #
-# Seeded 2026-08-29 per DEC-107. Core Engine Batches 1-4 migrated
-# 2026-09-18/20 (DEC-109); first research node registered with Batch 2.
+# Seeded 2026-08-29 per DEC-107. Core Engine Batches 1-5 migrated
+# 2026-09-18 through 2026-10-18 (DEC-109) — Core Engine complete;
+# first research node registered with Batch 2.
 
 nodes:
   - id: framework
@@ -28,7 +29,7 @@ nodes:
   - id: area.core-engine
     title: 01 Core Engine
     kind: framework-area
-    status: in-progress
+    status: complete
     path: 01_framework/01_core_engine/README.md
     tags: [architecture, resolution]
 
@@ -125,6 +126,17 @@ nodes:
       part: core-engine
       order: 40
 
+  - id: core.engine-boundaries
+    title: Engine Boundaries
+    kind: canonical-specification
+    status: locked
+    path: 01_framework/01_core_engine/05_engine_boundaries.md
+    tags: [resolution, vocabulary, boundaries, dec-109]
+    publication:
+      target: framework-core
+      part: core-engine
+      order: 50
+
   - id: research.tier-difficulty-vectors
     title: Tier Difficulty Vector Reference (calibration)
     kind: research-reference
@@ -186,6 +198,9 @@ edges:
   - from: area.core-engine
     to: core.opposed-and-automatic-successes
     relation: contains
+  - from: area.core-engine
+    to: core.engine-boundaries
+    relation: contains
 
   # Core Engine internal semantics
   - from: core.checks-and-pools
@@ -202,6 +217,20 @@ edges:
   - from: research.tier-difficulty-vectors
     to: core.difficulty-and-target-numbers
     relation: tests
+
+  # Engine boundaries: translated archived related-owners list (§11)
+  - from: core.engine-boundaries
+    to: area.actor
+    relation: related
+  - from: core.engine-boundaries
+    to: area.conflict
+    relation: related
+  - from: core.engine-boundaries
+    to: area.magic
+    relation: related
+  - from: core.engine-boundaries
+    to: area.reference
+    relation: related
 
   # Architecture documents (informational cross-links)
   - from: arch.map
